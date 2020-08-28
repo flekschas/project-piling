@@ -178,6 +178,7 @@
         <div class="container">
           <iframe
             class="video"
+            title="Video introduction to visual piling"
             src="https://www.youtube.com/embed/-SlwWtTCWFU?rel=0&modestbranding=1&autohide=1&controls=0"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
