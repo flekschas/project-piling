@@ -1,23 +1,9 @@
 <script>
+  import { getIconId } from './utils';
+
   export let icon;
 
-  switch (icon) {
-    case 'github':
-      icon = 'github';
-      break;
-
-    case 'code':
-      icon = 'code';
-      break;
-
-    case 'data':
-      icon = 'data';
-      break;
-
-    case 'link':
-      icon = 'globe';
-      break;
-  }
+  icon = getIconId(icon);
 </script>
 
 <style>
