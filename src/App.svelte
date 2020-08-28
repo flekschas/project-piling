@@ -389,7 +389,7 @@
         <li>
           <Author>
             <span slot="name">Nils Gehlenborg</span>
-            <span slot="affiliation">Harvard School of Engineering and Applied Sciences</span>
+            <span slot="affiliation">Harvard Medical School</span>
             <a href="http://gehlenborglab.org" target="_blank" slot="website">gehlenborglab.org</a>
             <a href="https://twitter.com/ngehlenborg" target="_blank" slot="twitter">ngehlenborg</a>
             <a href="https://github.com/ngehlenborg" target="_blank" slot="github">ngehlenborg</a>
