@@ -21,26 +21,29 @@
   }
 
   h1 {
-    margin: 2rem 0;
+    margin: 2rem 0 1rem 0;
     font-size: 2rem;
     line-height: 1.25;
-    text-align: center;
     text-transform: uppercase;
     color: var(--primary-color);
   }
 
+  h1 .text :global(> *:last-child) {
+    font-size: 1.5rem;
+  }
+
   h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   h3 {
-    font-size: 1.375em;
+    font-size: 1.25em;
     text-align: center;
   }
 
   h4 {
     margin: 1.5rem 0 0.125rem 0;
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 
   h5,
@@ -82,38 +85,65 @@
     padding-left: 0.75em;
   }
 
-  .lines {
-    display: flex;
-    align-items: center;
+  /* 400px */
+  @media screen and (min-width: 25rem) {
+    h1 .text :global(> *:last-child) {
+      font-size: inherit;
+    }
   }
 
-  .lines:before,
-  .lines:after {
-    content: '';
-    display: block;
-    flex-grow: 1;
-    height: 1px;
-    background: var(--gray-medium);
-  }
-
-  .lines:before {
-    margin-right: 1rem;
-  }
-
-  .lines:after {
-    margin-left: 1rem;
-  }
-
-  /* 720px */
-  @media screen and (min-width: 30em) {
+  /* 480px */
+  @media screen and (min-width: 30rem) {
     h1 {
       font-size: 2.5rem;
       line-height: 1.25;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    h3 {
+      font-size: 1.375em;
+      text-align: center;
+    }
+
+    h4 {
+      margin: 1.5rem 0 0.125rem 0;
+      font-size: 1.125rem;
+    }
+
+    h5,
+    h6 {
+      font-size: 1rem;
+    }
+
+    .lines {
+      display: flex;
+      align-items: center;
+    }
+
+    .lines:before,
+    .lines:after {
+      content: '';
+      display: block;
+      flex-grow: 1;
+      height: 1px;
+      background: var(--gray-medium);
+    }
+
+    .lines:before {
+      margin-right: 1rem;
+    }
+
+    .lines:after {
+      margin-left: 1rem;
     }
   }
 
   /* 720px */
-  @media screen and (min-width: 45em) {
+  @media screen and (min-width: 45rem) {
     h1 {
       font-size: 3rem;
       line-height: 1.25;
@@ -121,7 +151,7 @@
   }
 
   /* 1280px */
-  @media screen and (min-width: 80em) {
+  @media screen and (min-width: 80rem) {
     h1 {
       font-size: 4rem;
       line-height: 1.2em;
@@ -129,7 +159,7 @@
   }
 
   /* 1600px */
-  @media screen and (min-width: 100em) {
+  @media screen and (min-width: 100rem) {
     h1 {
       font-size: 5rem;
       line-height: 1.125em;

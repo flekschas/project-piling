@@ -63,14 +63,6 @@
 </script>
 
 <style>
-  .bigger {
-    font-size: 1em;
-  }
-
-  .justify {
-    text-align: justify;
-  }
-
   .container {
     position: absolute;
     top: 0;
@@ -145,7 +137,13 @@
     opacity: 0.75;
   }
 
-  /* 960px */
+  .no-wrap {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  /* 640px */
   @media screen and (min-width: 40em) {
     .bigger {
       font-size: 1.125em;
@@ -156,6 +154,10 @@
   @media screen and (min-width: 60em) {
     .bigger {
       font-size: 1.25em;
+    }
+
+    .justify {
+      text-align: justify;
     }
   }
 
@@ -168,7 +170,12 @@
 </style>
 
 <Main>
-  <Headline level={1}>Interactive Visual Piling<br/>of Small Multiples</Headline>
+  <Headline level={1}>
+    <span class="no-wrap">Interactive</span>
+    <span class="no-wrap">Visual Piling</span>
+    <br/>
+    <span class="no-wrap">of Small Multiples</span>
+  </Headline>
   <Section>
     <div slot="left">
       <p class="bigger justify"><strong>Visual piling is a technique for interactive organization, exploration, and comparison of large collections of small multiples.</strong> Handling large numbers of small multiples imposes challenges on many analytic tasks like inspection, comparison, navigation, or annotation. To address these challenges, we lay out a design space and implemented a library called <a href="https://github.com/flekschas/piling.js" target="_blank">Piling.js</a> for designing interactive piling interfaces.</p>
