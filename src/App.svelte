@@ -5,6 +5,7 @@
   import mediumZoom from 'medium-zoom';
 
   import Author from './Author.svelte';
+  import Badge from './Badge.svelte';
   import Footer from './Footer.svelte';
   import Headline from './Headline.svelte';
   import ListItem from './ListItem.svelte';
@@ -318,10 +319,11 @@
           <li>Benjamin Bach</li>
           <li>Hanspeter Pfister</li>
         </ol>
-        <span slot="journal">IEEE Transactions on Visualization and Computer Graphics</span>
+        <span slot="journal">To appear in IEEE Transactions on Visualization and Computer Graphics</span>
         <span slot="series">InfoVis '20</span>
         <span slot="year">2020</span>
       </Publication>
+      <Badge icon="award" text="IEEE InfoVis Best Paper Honorable Mention Award" />
     </div>
   </Section>
   <Section>
