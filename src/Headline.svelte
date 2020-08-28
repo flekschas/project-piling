@@ -38,7 +38,6 @@
 
   h3 {
     font-size: 1.25em;
-    text-align: center;
   }
 
   h4 {
@@ -49,6 +48,23 @@
   h5,
   h6 {
     font-size: 1rem;
+  }
+
+  .lines {
+    display: flex;
+    align-items: center;
+  }
+
+  .lines:after {
+    content: '';
+    display: block;
+    flex-grow: 1;
+    height: 1px;
+    background: var(--gray-medium);
+  }
+
+  .lines:after {
+    margin-left: 1rem;
   }
 
   .container {
@@ -119,13 +135,7 @@
       font-size: 1rem;
     }
 
-    .lines {
-      display: flex;
-      align-items: center;
-    }
-
-    .lines:before,
-    .lines:after {
+    .lines:before {
       content: '';
       display: block;
       flex-grow: 1;
@@ -135,10 +145,6 @@
 
     .lines:before {
       margin-right: 1rem;
-    }
-
-    .lines:after {
-      margin-left: 1rem;
     }
   }
 
