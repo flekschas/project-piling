@@ -1,7 +1,3 @@
-<script>
-  export let bigger = false;
-</script>
-
 <style>
   section {
     position: relative;
