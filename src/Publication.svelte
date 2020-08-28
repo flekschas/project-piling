@@ -21,23 +21,23 @@
     list-style: none;
   }
 
-  .authors  :global(ol > li) {
-    margin-left: 0.25em;
+  .authors :global(ol > li) {
+    margin-right: 0.25em;
   }
 
-  .authors  :global(ol > li:first-child) {
-    margin-left: 0;
+  .authors :global(ol > li:last-child) {
+    margin-right: 0;
   }
 
-  .authors  :global(ol > li:after) {
+  .authors :global(ol > li:after) {
     content: ', ';
   }
 
-  .authors  :global(ol > li:last-child:after) {
+  .authors :global(ol > li:last-child:after) {
     content: '.';
   }
 
-  .authors  :global(ol > li:last-child:before) {
+  .authors :global(ol > li:last-child:before) {
     content: ' and ';
   }
 
