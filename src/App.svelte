@@ -18,10 +18,16 @@
   import VSpace from './VSpace.svelte';
 
   import { example } from './stores.js';
+  import { supportsWebGl2 } from './utils';
 
   import createPilingImages from './piling-images.js';
   import createPilingMatrices from './piling-matrices.js';
   import createPilingDrawings from './piling-drawings.js';
+
+  let webgl2Support;
+  supportsWebGl2().then((_webgl2Support) => {
+    webgl2Support = _webgl2Support;
+  });
 
   let wrapper;
   let piling;
@@ -38,7 +44,11 @@
 
     switch ($example) {
       case 'matrices':
-        piling = await createPilingMatrices(wrapper);
+        if (await supportsWebGl2()) {
+          piling = await createPilingMatrices(wrapper);
+        } else {
+          piling = undefined;
+        }
         break;
 
       case 'area-charts':
@@ -78,6 +88,16 @@
   .container-pilingjs {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+  }
+
+  .container-warn {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    background: var(--gray-medium);
   }
 
   .caption,
@@ -261,6 +281,11 @@
     </div>
     <div slot="left">
       <Ratio ratio={2800/1800}>
+        {#if $example === 'matrices' && !webgl2Support}
+          <div class="container container-pilingjs container-warn">
+            <p>Your browser does not support WebGL2. Please use Chrome or Firefox.</p>
+          </div>
+        {/if}
         <div class="container container-pilingjs" bind:this={wrapper} />
       </Ratio>
       <div class="example-buttons">

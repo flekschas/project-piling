@@ -24,3 +24,11 @@ export const getIconId = (icon) => {
       return null;
   }
 };
+
+export const supportsWebGl2 = () =>
+  new Promise((resolve) => {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('webgl2');
+    if (ctx) resolve(true);
+    else resolve(false);
+  });
