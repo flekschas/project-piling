@@ -77,25 +77,23 @@ const create = async (element) => {
   const items = await fetchJson(`${baseUrl}/drawings/teapot-500.json`);
 
   const piling = createPilingJs(element, {
+    // Required
     items,
-    darkMode: true,
-    renderer: quickDrawRenderer,
-    coverRenderer: quickDrawCoverRenderer,
-    coverAggregator: quickDrawCoverAggregator,
-    itemSize: 24,
-    columns: 15,
+    itemRenderer: quickDrawRenderer,
+    // Optional
     cellPadding: 8,
+    columns: 15,
+    coverAggregator: quickDrawCoverAggregator,
+    coverRenderer: quickDrawCoverRenderer,
+    darkMode: true,
+    itemSize: 24,
+    pileBorderSize: (pile) => Math.log(pile.items.length),
     pileCoverInvert: true,
     pileItemInvert: true,
     pileItemOffset: [0, 0],
-    // pileBackgroundColor: 'rgba(0, 0, 0, 0)',
-    // pileBackgroundColorHover: 'rgba(0, 0, 0, 1.0)',
-    pileBorderOpacityHover: 0,
     pileScale: (pile) => 1 + Math.min((pile.items.length - 1) * 0.05, 2),
+    pileSizeBadge: (pile) => pile.items.length > 1,
     pileVisibilityItems: (pile) => pile.items.length === 1,
-    // backgroundColor: '#ffffff',
-    // lassoFillColor: '#000000',
-    // lassoStrokeColor: '#000000',
     zoomScale: (cameraScale) =>
       cameraScale >= 1 ? 1 + (cameraScale - 1) / 2 : cameraScale,
   });
