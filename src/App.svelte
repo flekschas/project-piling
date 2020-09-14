@@ -22,6 +22,7 @@
 
   import createPilingImages from './piling-images.js';
   import createPilingMatrices from './piling-matrices.js';
+  import createPilingAreaCharts from './piling-area-charts.js';
   import createPilingDrawings from './piling-drawings.js';
 
   let webgl2Support;
@@ -52,7 +53,7 @@
         break;
 
       case 'area-charts':
-        piling = await createPilingImages(wrapper);
+        piling = await createPilingAreaCharts(wrapper);
         break;
 
       case 'drawings':
@@ -310,7 +311,6 @@
             color="secondary"
             variant={$example === 'area-charts' ? 'unelevated' : 'outlined'}
             dense
-            disabled
             on:click={() => example.set('area-charts')}
           >
             <Label>Area Charts</Label>

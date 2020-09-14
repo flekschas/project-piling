@@ -5,6 +5,9 @@
   "dependencies": {
     "@flekschas/utils": "^0.24.1",
     "@smui/button": "^1.0.0",
+    "d3-format": "^2.0.0",
+    "d3-scale": "^3.2.2",
+    "d3-shape": "^2.0.0",
     "medium-zoom": "^1.0.5",
     "svelte": "^3.24.0"
   },
