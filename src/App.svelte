@@ -348,7 +348,7 @@
         <span slot="series">InfoVis '20</span>
         <span slot="year">2020</span>
       </Publication>
-      <Badge icon="award" text="IEEE InfoVis: Honorable Mention Award" />
+      <Badge icon="award" text="IEEE InfoVis Honorable Mention Award" />
     </div>
   </Section>
   <Section>

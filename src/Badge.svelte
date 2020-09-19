@@ -11,7 +11,6 @@
   .badge {
     padding: 0.125em 0.25em;
     font-size: 0.8em;
-    text-transform: uppercase;
     color: black;
     background: #eee462;
     border-radius: 0.25rem;
